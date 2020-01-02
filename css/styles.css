@@ -1,0 +1,128 @@
+:root {
+  --general-color: #626262;
+  --paragraph-color: #b4ad9e;
+  --accent-color: #03a9f4;
+  --general-font: "Playfair Display", serif;
+  --paragraph-font: "Ubuntu", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0px;
+}
+
+.page-header {
+  min-height: 188px;
+}
+
+/*Container*/
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.site-nav .link {
+  display: block;
+  padding-top: 70px;
+  padding-right: 55px;
+  padding-bottom: 95px;
+  padding-left: 55px;
+  font-size: 14px;
+  line-height: 1.7;
+  text-transform: uppercase;
+  font-family: var(--general-font);
+  color: var(--general-color);
+  text-decoration: none;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/*Section*/
+.articles {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0px;
+  padding: 0px;
+}
+.articles .link {
+  display: block;
+  width: 420px;
+  margin-right: 60px;
+  font-size: 0px;
+}
+
+.articles :nth-child(2n) {
+  margin-right: 0px;
+}
+
+.articles .paragraph {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--paragraph-color);
+  font-family: var(--paragraph-font);
+}
+
+.articles .title {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 40px;
+  font-size: 28px;
+  line-height: 1.2;
+  color: var(--general-color);
+  font-family: var(--general-font);
+}
+
+.articles .description {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--general-color);
+  font-family: var(--general-font);
+}
+
+.articles .button {
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--general-color);
+  font-family: var(--general-font);
+  cursor: pointer;
+
+  flex-basis: 164px;
+  height: 60px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 56px;
+  margin-bottom: 70px;
+}
