@@ -122,6 +122,7 @@ body {
   color: var(--general-color);
   font-family: var(--general-font);
   cursor: pointer;
+  background-color: ;
 
   flex-basis: 164px;
   height: 60px;
