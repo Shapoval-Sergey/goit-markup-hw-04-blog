@@ -1,6 +1,7 @@
 :root {
   --general-color: #626262;
   --paragraph-color: #b4ad9e;
+  --button-background-color: #ffffff;
   --accent-color: #03a9f4;
   --general-font: "Playfair Display", serif;
   --paragraph-font: "Ubuntu", sans-serif;
@@ -22,15 +23,15 @@ body {
   min-height: 188px;
 }
 
-/*Container*/
+/*Контейнер*/
 .container {
-  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 900px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 150px;
-  padding-right: 150px;
 }
-
+/*Меню сайта*/
 .site-nav {
   display: flex;
   justify-content: center;
@@ -42,7 +43,7 @@ body {
   list-style: none;
 }
 
-.site-nav .link {
+.site-nav .link-nav {
   display: block;
   padding-top: 70px;
   padding-right: 55px;
@@ -56,40 +57,48 @@ body {
   text-decoration: none;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.site-nav .link-nav:hover,
+.site-nav .link-nav:focus {
   color: var(--accent-color);
   text-decoration: underline;
 }
 
-/*Section*/
+/*Главная секция*/
+.section {
+  margin-bottom: 70px;
+}
+
 .articles {
   display: flex;
   flex-flow: row wrap;
   margin: 0px;
   padding: 0px;
+  margin-bottom: 56px;
 }
-.articles .link {
+.articles .articles-list {
   display: block;
   width: 420px;
   margin-right: 60px;
   font-size: 0px;
-  margin-top: 132px;
+  margin-bottom: 132px;
 }
 
 .articles :nth-child(2n) {
   margin-right: 0px;
 }
 
-.articles :nth-child(-n + 2) {
-  margin-top: 0px;
+.articles :nth-last-child(-n + 2) {
+  margin-bottom: 0px;
+}
+
+.image {
+  margin-bottom: 30px;
 }
 
 .articles .paragraph {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.2;
   text-transform: uppercase;
@@ -98,9 +107,9 @@ body {
 }
 
 .articles .title {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-bottom: 40px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-bottom: 40px;
   font-size: 28px;
   line-height: 1.2;
   color: var(--general-color);
@@ -108,27 +117,23 @@ body {
 }
 
 .articles .description {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-size: 14px;
   line-height: 1.7;
   color: var(--general-color);
   font-family: var(--general-font);
 }
 
-.articles .button {
+.button {
+  margin-left: auto;
+  margin-right: auto;
   font-size: 20px;
   line-height: 1.2;
   color: var(--general-color);
   font-family: var(--general-font);
   cursor: pointer;
-  background-color: ;
-
-  flex-basis: 164px;
+  background-color: var(--button-background-color);
+  width: 164px;
   height: 60px;
-  padding: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 56px;
-  margin-bottom: 70px;
 }
